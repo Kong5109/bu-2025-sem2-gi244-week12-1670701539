@@ -48,6 +48,8 @@ public class Target : MonoBehaviour, IPointerClickHandler
 
         var gm = FindFirstObjectByType<GameManager>();
         gm.UpdateScore(point);
+
+        Instantiate(explosionParticle, transform.position, Quaternion.identity);
     }
 
     private void OnTriggerEnter(Collider other)
