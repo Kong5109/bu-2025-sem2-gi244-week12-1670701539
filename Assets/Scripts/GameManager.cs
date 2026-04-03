@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public List<GameObject> targets;
+    
 
     [Header("UI Elements")]
     // NOTE: TextMeshProUGUI requires "using TMPro"
@@ -34,7 +35,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        scoreText.text = "Score " + score;
         StartGame();
+    }
+
+    public void UpdateScore(int score)
+    {
+        this.score += score;
+        scoreText.text = "Score " + this.score;
     }
 
     void StartGame()
@@ -44,7 +52,14 @@ public class GameManager : MonoBehaviour
 
     IEnumerator SpawnTargets()
     {
-        yield return null;
+        while (true)
+        {
+            int idx = Random.Range(0, targets.Count);
+            var prefab = targets[idx];
+            Instantiate(prefab);
+
+            yield return new WaitForSeconds(1f);
+        }
     }
 }
 
