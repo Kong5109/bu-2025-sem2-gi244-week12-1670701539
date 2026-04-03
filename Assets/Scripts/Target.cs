@@ -55,6 +55,12 @@ public class Target : MonoBehaviour, IPointerClickHandler
         if (other.CompareTag("Sensor"))
         {
             Destroy(gameObject);
+
+            if (point > 0)
+            {
+                var gm = FindFirstObjectByType<GameManager>();
+                gm.UpdateScore(-point);
+            }
         }
     }
 }

@@ -800,7 +800,7 @@ MonoBehaviour:
   - {fileID: 8767278657476668662, guid: 5a6677b07c7a99d4398241b58384ba4d, type: 3}
   - {fileID: 4220338274684187268, guid: 2e4dacc4c9946ee40b9064b472dac79f, type: 3}
   - {fileID: 5570047969998752377, guid: 6b26599e4de22dd408665ac92117d1da, type: 3}
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 1126280870}
   gameOverText: {fileID: 0}
   restartButton: {fileID: 0}
   titleScreen: {fileID: 0}
